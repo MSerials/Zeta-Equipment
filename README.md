@@ -126,10 +126,6 @@
    ![控制卡](./res/MotionCard.png)
 
 
-   1.控制卡接口
-   ![控制卡](./res/MotionCard.png)
-
-
 
   <c name="设备通信"></c>
   # 第五章:设备通信
