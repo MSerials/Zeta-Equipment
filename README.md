@@ -1,25 +1,28 @@
+
+
+# English:
+1. To update the program, simply download the WeldCNC folder. Run the program from the WeldCNC folder using WeldCNC.exe.
+# 한국어:
+1. 프로그램을 업데이트하려면 WeldCNC 폴더를 다운로드하십시오. WeldCNC 폴더 내의 WeldCNC.exe를 실행하십시오.
 # 简体中文
-
-1.更新程序，只需要下载WeldCNC里的MWidgetCAD.dll复制到D盘WeldCNC目录里即可。
-
-
-# English
-
-1. To update the program, simply download the MWidgetCAD.dll file from the WeldCNC directory and copy it to the WeldCNC directory on the D drive.
-
-
-# 程序修改记录
-|序号|时间|更新内容|
-|-|-|-|
-|1|2023.9.19|新增了焊接次数报警，用于提示更换枪头|
-|2|2024.6.27|可以使用两张图纸，在设置里|
-
+1.更新程序，下载WeldCNC文件夹即可，程序运行WeldCNC文件夹里的WeldCNC.exe。
 
 # Program Modification History
 |No.|Time|Update|
 |-|-|-|
 |1|2023.9.19|Added welding count alarm to prompt gun head replacement|
 |2|2024.6.27|2 drawings can be imported, the selection is in setting|
+# 프로그램 수정 이력
+|번호|시간|업데이트|
+|-|-|-|
+|1|2023.9.19|용접 횟수 알람 추가하여 총 머리 교체를 알림|
+|2|2024.6.27|2개의 도면을 가져올 수 있으며, 선택은 설정에서 가능합니다|
+
+# 程序修改记录
+|序号|时间|更新内容|
+|-|-|-|
+|1|2023.9.19|新增了焊接次数报警，用于提示更换枪头|
+|2|2024.6.27|可以使用两张图纸，在设置里|
 
 # 设备操作说明
 
@@ -66,11 +69,21 @@
    - [Chapter 3: Device Parameters](#chapter-3-device-parameters)
      - [3.1 Power Connection Requirements](#31-power-connection-requirements)
      - [3.2 Electrical Safety Standards](#32-electrical-safety-standards)
-   ###
-   - [Chapter 4: Common Faults](#chapter-4-common-faults)
-     - [4.1 Power Connection Requirements](#41-power-connection-requirements)
-     - [4.2 Electrical Safety Standards](#42-electrical-safety-standards)  
-  
+###
+
+- [Chapter 4: Common Failures](#chapter-4-common-failures)
+
+  - [4.1 Common Errors](#41-common-errors)
+
+###
+
+- [Chapter 5: Device Communication](#chapter-5-device-communication)
+
+  - [5.1 Robot Integration](#51-robot-integration)
+
+  - [5.2 ModbusTCP](#52-modbustcp)
+
+  - [5.3 IO Points](#53-io-list)
 
 
 
