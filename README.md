@@ -171,7 +171,8 @@ Then repeat the above logic.
 | 4Xbit-1701| 16      | 1bit| 设备运行中           |
 | 4Xbit-1702| 16      | 1bit| 复位完成信号          |
 | 4Xbit-1703| 16      | 1bit| 卸载点信号（需要复位完成后才会触发）          |
-| 4X21    | 20      | 1bit| 卸载点信号（需要复位完成后才会触发）          |
+| 4X21    | 20      | 1| 卸载点信号（需要复位完成后才会触发）          |
+| 4X201    | 200      | 1| 写1的时候禁止启动，来自机械臂的卸载点信号          |
 
 ## 5.2ModbusTCP list
 | Address    | Program Offset | Length | Meaning                            |
@@ -189,7 +190,8 @@ Then repeat the above logic.
 | 4Xbit-1701 | 16             | 1bit   | Device Running                     |
 | 4Xbit-1702 | 16             | 1bit   | Origin Completion Signal            |
 | 4Xbit-1703 | 16             | 1bit   | LoadPosition signal(Triggered after device origined)          |
-| 4X21    | 20                | 1      | LoadPosition signal(Triggered after device origined)          |
+| 4X21      | 20              | 1      | LoadPosition signal(Triggered after device origined)          |
+| 4X201    | 200              | 1     | Writing 1 prohibits starting, the unloading point signal from the robot arm.       |
 
 ## 5.3输入输出组
 
