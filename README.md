@@ -144,6 +144,9 @@
 给卸料完毕信号告诉设备没料(gin2组6) -> 等待准备上料信号(gout2组5， 设备需要复位完成且在卸载点且给卸料完毕信号才会输出) -> 触发运行回卸载点(gin3组11) -> 等待焊接完成信号(gout2组6) 
 然后循环以上逻辑
 
+
+如果中间出现急停，设备将会立刻停止运作。 如果想继续上次点焊接，请读取4x51信号后，在复位完毕后，将这个信号复制给4x61
+
 ## 5.1 Robot Communication
 The device communicates with the robot through Modbus and IO points, each with its own communication logic.
 When the device is powered on or in an alarm state, a reset is required. The operational sequence is as follows:
@@ -172,6 +175,10 @@ Then repeat the above logic.
 | 4Xbit-1702| 16      | 1bit| 复位完成信号          |
 | 4Xbit-1703| 16      | 1bit| 卸载点信号（需要复位完成后才会触发）          |
 | 4X21    | 20      | 1| 卸载点信号（需要复位完成后才会触发）          |
+| 4X51    | 50      | 1| 图纸1当前焊接点序号          |
+| 4X52    | 51      | 1| 图纸2当前焊接点序号          |
+| 4X61    | 60      | 1| 设置图纸1当前焊接点序号，默认值为0，当设置为2后，则图纸1当前需要变为2，焊接将从第二个点开始焊接起来，用于中途急停后复位完毕继续焊接使用|
+| 4X62    | 61      | 1| 设置图纸2当前焊接点序号，默认值为0，当设置为2后，则图纸2当前需要变为2，焊接将从第二个点开始焊接起来，用于中途急停后复位完毕继续焊接使用|
 | 4X201    | 200      | 1| 写1的时候禁止启动，来自机械臂的卸载点信号          |
 
 ## 5.2ModbusTCP list
