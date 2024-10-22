@@ -21,8 +21,9 @@
 # 程序修改记录
 |序号|时间|更新内容|
 |-|-|-|
-|1|2023.9.19|新增了焊接次数报警，用于提示更换枪头|
-|2|2024.6.27|可以使用两张图纸，在设置里|
+|1|2024.10.18|新增可导入三张图纸|
+|2|2023.9.19|新增了焊接次数报警，用于提示更换枪头|
+|3|2024.6.27|可以使用两张图纸，在设置里|
 
 # 设备操作说明
 
@@ -30,20 +31,20 @@
    - [第一章：快速上手](#第一章快速上手)
      - [1.1 准备工作](#11-准备工作)
      - [1.2 软件快速操作](#12-软件快速操作)
-    
+
    ###
    - [第二章：软件参数](#第二章软件参数)
      - [2.1 dxf文件导入](#21-参数设置方法)
      - [2.2 控制卡参数](#21-参数设置方法)
      - [2.3 设备参数](#22-参数说明)
-   ###
+      ###
    - [第三章：设备参数](#第三章设备参数)
      - [3.1 电源接入要求](#31-电源接入要求)
      - [3.2 电气安全规范](#32-电气安全规范)
-   ###
+      ###
    - [第四章：常见故障](#第四章常见故障)
      - [4.1 常见错误](#41-常见错误)
-   ###
+      ###
    - [第五章：设备通信](#第五章设备通信)
      - [5.1 机器人接入](#51-机器人接入)
      - [5.2 ModbusTCP](#52-ModbusTCP)
@@ -53,7 +54,7 @@
    - [第六章：接线注意](#第六章接线注意)
      - [6.1 注意事项](#61-注意事项)
      -
-    
+
 ### 
 
 
@@ -63,17 +64,17 @@
   - [Chapter 1: Quick Start](#chapter-1-quick-start)
      - [1.1 Preparations](#11-preparations)
      - [1.2 Quick Software Operation](#12-quick-software-operation)
-    
+
    ###
    - [Chapter 2: Software Parameters](#chapter-2-software-parameters)
      - [2.1 Importing dxf Files](#21-importing-dxf-files)
      - [2.2 Control Card Parameters](#22-control-card-parameters)
      - [2.3 Device Parameters](#23-device-parameters)
-   ###
+      ###
    - [Chapter 3: Device Parameters](#chapter-3-device-parameters)
      - [3.1 Power Connection Requirements](#31-power-connection-requirements)
      - [3.2 Electrical Safety Standards](#32-electrical-safety-standards)
-###
+     ###
 
 - [Chapter 4: Common Failures](#chapter-4-common-failures)
 
@@ -96,22 +97,56 @@
    # 第一章：快速上手
    ## 准备工作
    1.接入电源，设备使用220AC/50Hz的交流电以及压缩空气，请在开启设备前确认交流电和气泵。
-   
+
    2.保证设备运行有足够的空间，供装卸工件。
-   
+
    3.设备不应该在超过45度环境中工作。
 
 
    <b name="12-软件快速操作"></b>
    ## 软件快速操作
-   1.当通电后，开启电脑，电脑进入桌面后，桌面有CADStart和WeldChart两个快捷方式，其中CADStart是设备操作，WeldChart是焊机的电压控制程序。
+   1.当通电后，开启电脑，电脑进入桌面后，桌面有WeldCNC和WeldChart两个快捷方式，其中WeldCNC是设备操作，WeldChart是焊机的电压控制程序。
 
    ![软件主页](./res/main.png)
    2.点击软件主页的复位，设备伺服会进行找原点。
 
    3.复位完毕后，运行会显示为红色，点击一次，设备会跑到卸载点，这样可以放入工件到设备上。
-   
+
    4.工件放入到设备上，再点击一次运行，设备就可以开始工作了。
+
+
+
+
+
+   # Chapter1:Quick Start
+
+   ## Preparation
+
+1. Connect to power supply. The device uses 220V AC/50Hz alternating current and compressed air. Please verify the AC power and air pump before turning on the device.
+
+2. Ensure there is sufficient space around the device for loading and unloading workpieces.
+
+3. The device should not operate in environments exceeding 45 degrees Celsius.
+
+
+   <b name="12-软件快速操作"></b>
+
+## Quick Software Operation
+
+1. After powering on, start the computer. Once the desktop appears, you will see two shortcuts: WeldCNC and WeldChart. WeldCNC is for device operation, while WeldChart is the voltage control program for the welding machine.
+
+   ![软件主页](./res/main.png)
+
+2. Click "Reset" on the software's main page. The device's servo will then perform its homing procedure.
+
+3. After the reset is complete, the "Run" button will turn red. Click it once, and the device will move to the unloading position. This allows you to place the workpiece onto the device.
+
+4. Once the workpiece is placed on the device, click "Run" again, and the device will begin its operation.
+
+
+
+
+
 
 
 ###
@@ -126,12 +161,21 @@
    <c name="设备参数"></c>
    # 第三章:设备参数
 
-   1.控制卡接口
+   1.控制卡接口,控制卡可以提供4个脉冲轴或者4或者更多（需要具体看型号）个总线轴的驱动。
    ![控制卡](./res/MotionCard.png)
 
 
 
-  <c name="设备通信"></c>
+
+
+   <c name="设备参数"></c>
+
+   #  Chapter 3: Device Parameters
+
+Motion Card Interface: The control card can provide drive for 4 pulse axes or 4  or more(specific number depends on the model) bus axes.
+
+ <c name="设备通信"></c>
+
   # 第五章:设备通信
 
 <c name="Device Communication"></c>
